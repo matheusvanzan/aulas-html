@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- HTML5 Hello world by kirupa - http://www.kirupa.com/html5/getting_your_feet_wet_html5_pg1.htm -->
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<title>Hello...</title>
+</head>
+
+<body>
+	<div>
+		<p>exemplo-num = <span id="exemplo-num"></span></p>
+		<p>exemplo-num = <span id="exemplo-string"></span></p>
+		<p>exemplo-num = <span id="exemplo-lista"></span></p>
+		<p>exemplo-num = <span id="exemplo-lista-dict"></span></p>
+	</div>
+
+
+	<!-- Este script deve vir antes do seu código que manipula a variavel global DADOS -->
+	<script src="dados.js"></script>
+
+	<script> 
+		// Itens comuns
+		document.getElementById('exemplo-num').innerHTML = DADOS['exemplo-num']
+		document.getElementById('exemplo-string').innerHTML = DADOS['exemplo-string']
+		
+		// Lista simples
+		var itens_lista_str = '';
+		for (var i=0; i<DADOS['exemplo-lista'].length; i++) {
+			itens_lista_str += DADOS['exemplo-lista'][i] + ', ';
+		}
+		document.getElementById('exemplo-lista').innerHTML = itens_lista_str;
+		
+		
+		// Lista de objetos
+		var itens_lista_dict_str = '';
+		for (var i=0; i<DADOS['exemplo-lista-dict'].length; i++) {
+			itens_lista_dict_str += DADOS['exemplo-lista-dict'][i]['dado-1'] + ', ';
+			itens_lista_dict_str += DADOS['exemplo-lista-dict'][i]['dado-2'] + '; ';
+		}
+		document.getElementById('exemplo-lista-dict').innerHTML = itens_lista_dict_str;
+	</script>
+
+</body>
+</html>

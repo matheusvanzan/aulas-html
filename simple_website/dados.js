@@ -1,0 +1,1 @@
+DADOS = {"exemplo-num": 1000, "exemplo-string": "sou uma string", "exemplo-lista-dict": [{"dado-2": "456", "dado-1": "123"}, {"dado-2": "ABC", "dado-1": "789"}], "exemplo-lista": ["item-1", "item-2"]}
